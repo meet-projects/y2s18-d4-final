@@ -1,0 +1,45 @@
+<DOCTYPE! html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{
+	url_for('static' , filename='style.css')}}">
+	<title>
+	 become BETTER
+	</title>
+</head>
+<body background="">
+
+	<a name="top"></a>
+<div class="links">
+	<a href="{{ url_for('home_page') }}" >Home page</a>
+</div>
+	<h1><center><font color="gren">BECOM A MEMBER</font></center></h1>
+	
+<br/><br/><br/><br/><br/><br/><br/>
+				<center>
+					<form  action="" method="post">
+						FIRST NAME:	<input type="text" name="txb_fname" placeholder="First name"><br/><br/>
+						LAST NAME:	<input type="text" name="txb_lname" placeholder="Last name"><br/><br/>
+						PASSWORD:	<input type="password" name="txb_pass" placeholder="password" ><br/><br/>
+						EMAIL:	<input type="text" name="txb_email" placeholder="Email"><br/><br/>
+						<input type="submit" name="btnsubmit" value="submit">
+					</form>	
+					</center>
+			
+
+<!--			<h1>tipe of exercises</h1>
+				<ul>
+					{%if likes_same_sport == True%}
+						<li>test</li>
+						{%for exe in exersices%}
+						<li>{{exe}}</li>
+						{%endfor%}
+					{%else%}
+						<p>i don't like sports</p>	
+					{%endif%}
+				</ul>-->
+		
+		<a href="#top">GO UP</a>
+		
+</body>
+</html>
