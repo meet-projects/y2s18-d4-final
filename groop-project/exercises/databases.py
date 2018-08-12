@@ -8,7 +8,7 @@ Base.metadata.create_all(engine)
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
-def register(fname, lname ,uname , password ):
+def register(fname, lname , password ):
 	"""
 	Add a student to the database, given
 	their name, year, and whether they have127.0.0.1:5000
@@ -17,18 +17,17 @@ def register(fname, lname ,uname , password ):
 	user_object = User(
 		fname=fname,
 		lname=lname,
-		uname=uname,
 		password=password)
 	session.add(user_object)
 	session.commit()
 
-def query_by_name(uname):
+def query_by_name(name):
 	"""
 	Find the first student in the database,
 	by their name
 	"""
 	user = session.query(User).filter_by(
-		uname=uname).first()
+		name=name).first()
 	return user
 
 def query_all():
@@ -38,22 +37,22 @@ def query_all():
 	users = session.query(User).all()
 	return users
 
-def delete_User(uname):
+def delete_User(name):
 	"""
 	Delete all students with a certain name
 	from the database.
 	"""
 	session.query(User).filter_by(
-		uname=uname).delete()
+		name=name).delete()
 	session.commit()
 
-def update_password(uname, password):
+def update_password(name, password):
 	"""
 	Update a student in the database, with 
 	whether or not they have finished the lab
 	"""
 	user_object = session.query(User).filter_by(
-		uname=uname).first()
+		name=name).first()
 	user_object.password = password
 	session.commit()
 
@@ -62,4 +61,4 @@ def query_by_id(user_id):
         user_id=user_id).first()
     return user
 
-#register('noam', 'mertsen' ,'VFDTHDYH' ,  '123456789')
+register('noam', 'mertsen' , '123456789')

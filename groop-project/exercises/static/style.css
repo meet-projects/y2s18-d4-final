@@ -1,15 +1,13 @@
-.sidebar{
-	position: fixed;
-	top:0px;
-	left:0px;
-	border: 1px solid;
+body {
+    background-image: url("d5c2856a33f9971cc9734d18cf098cb5--complicated-quotes-quotes-that-inspire.jpg");
 }
+
 h2 {
      	
     text-align: center;
 }
 title {
-	color: black;
+	color: green;
 }
 a : link{
 	color: black;
@@ -37,12 +35,10 @@ a : active{
 	background-color: white;
 	z-index: 100;
 }
-/*.title{
+.title{
 	position: absolute;
 	height: 125px;
 	width: 100%;
 	background-color: green;
 	
 }
-*/
-

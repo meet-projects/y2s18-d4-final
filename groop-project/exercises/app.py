@@ -6,17 +6,13 @@ app = Flask(__name__)
 def register():
     return render_template('register.html')
 
-@app.route('/Login')
-def LogIn_page():
-	return render_template('LogIn.html')
-
-@app.route('/Home')
+@app.route('/home')
 def home_page():
-    return render_template('home.html')
+	return render_template('hello.html')
 
-#@app.route('/student/<int:student_id>')
-#def display_student(student_id):
-#    return render_template('student.html', student=query_by_id(student_id))
+@app.route('/student/<int:student_id>')
+def display_student(student_id):
+    return render_template('student.html', student=query_by_id(student_id))
 
 @app.route("/add" , methods=['GET' , 'POST'])
 

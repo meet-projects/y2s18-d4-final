@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <title>Login</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+    <h1>Login</h1>
+    <form action="/add" method="post">
+      TIPE YOUR NAME  <input type="text" name="username" placeholder="Your name">
+        <br>
+     TPIE YOUR YEAR   <input type="text" name="year" placeholder="Your year">
+        <br/>
+        Finish lab
+        <br/>
+     True:   <input type="radio" name="finish_lab" value="True">
+         False:<input type="radio" name="finish_lab" value="False">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
