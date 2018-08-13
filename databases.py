@@ -8,7 +8,7 @@ Base.metadata.create_all(engine)
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
-def register(fname, lname ,uname , password ):
+def Register(fname, lname ,uname , password ):
 	"""
 	Add a student to the database, given
 	their name, year, and whether they have127.0.0.1:5000
