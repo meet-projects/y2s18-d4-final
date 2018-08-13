@@ -34,7 +34,7 @@ a : active{
 .sidebar{
 	position: absolute;
 	top: 0px;
-	left: 100px;
+	left: 700px;
 	background-color: white;
 	z-index: 100;
 }
