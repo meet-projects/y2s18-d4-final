@@ -36,7 +36,11 @@ def home_page():
 		nickName = request.form['txb_name']
 		u=query_by_name(nickName)
 		add_post(nickName , post)
-		return render_template('home.html')
+		POSTS = query_all_posts()
+		post_name=POSTS.nickName
+		post_body=POSTS.post
+		return render_template('home.html' , post_name , post_body )
+
 
 #@app.route('/student/<int:student_id>')
 #def display_student(student_id):
@@ -56,3 +60,4 @@ def add_student_route():
 
 '''
 app.run(debug=True)
+
