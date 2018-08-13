@@ -23,4 +23,16 @@ class User(Base):
 					self.uname,
 					self.password)
 
+class Posts(Base):
+	__tablename__='posts'
+	post_id = Column(Integer, primary_key=True)
+	uname = Column(String)
+	post = Column(String)
 
+	def __repr__(self):
+		return ("Post id: {}\n"
+				"User Name: {} \n"
+				"Post: {}").format(
+					self.post_id,
+					self.uname,
+					self.post)

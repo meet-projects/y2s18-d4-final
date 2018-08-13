@@ -1,4 +1,4 @@
-from model import Base, Post
+from model import Base, User
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -64,21 +64,5 @@ def query_by_id(user_id):
     user = session.query(User).filter_by(
         user_id=user_id).first()
     return user
-
-
-def add_post(uname , post):
-	post_object = Posts(
-		uname=uname,
-		post=post)
-	session.add(post_object)
-	session.commit()
-
-
-def query_all_posts():
-	"""
-	Print all the posts in the database.
-	"""
-	posts = session.query(Posts).all()
-	return posts
 
 #register('noam', 'mertsen' ,'VFDTHDYH' ,  '123456789')

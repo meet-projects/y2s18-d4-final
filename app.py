@@ -27,9 +27,16 @@ def LogIn_page():
 		if u is not None and u.uname==username and u.password==password:
 			return render_template('home.html', userName=username )
 
-@app.route('/Home')
+@app.route('/Home' , methods=['GET' , 'POST'])
 def home_page():
-    return render_template('home.html')
+	if request.method== 'GET':
+		return render_template('home.html')
+	else:	
+		post = request.form['txb_post']
+		nickName = request.form['txb_name']
+		u=query_by_name(nickName)
+		add_post(nickName , post)
+		return render_template('home.html')
 
 #@app.route('/student/<int:student_id>')
 #def display_student(student_id):
