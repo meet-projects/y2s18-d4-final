@@ -11,7 +11,7 @@ class User(Base):
 	fname = Column(String)
 	lname = Column(String)
 	uname = Column(String)
-	password = Column(Integer)
+	password = Column(String)
 
 	def __repr__(self):
 		return ("User First Name: {}\n"

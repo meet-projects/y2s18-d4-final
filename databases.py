@@ -3,12 +3,12 @@ from model import Base, User
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-engine = create_engine('sqlite:///students.db')
+engine = create_engine('sqlite:///databases.db')
 Base.metadata.create_all(engine)
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
-def register(fname, lname ,uname , password ):
+def Register(fname, lname ,uname , password ):
 	"""
 	Add a student to the database, given
 	their name, year, and whether they have127.0.0.1:5000
@@ -21,6 +21,9 @@ def register(fname, lname ,uname , password ):
 		password=password)
 	session.add(user_object)
 	session.commit()
+
+
+
 
 def query_by_name(uname):
 	"""
