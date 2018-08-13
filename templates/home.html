@@ -28,16 +28,15 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li id="login_link" class="nav-item active">
-        <a class="nav-link" href="LogIn_page">Log In <span class="sr-only"></span></a>
+        <a class="nav-link" href="{{ url_for('LogIn_page') }}">Log In <span class="sr-only"></span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="register">Sign Up</a>
+        <a class="nav-link" href="{{ url_for('register') }}">Sign Up</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="home_page">Home</a>
+        <a class="nav-link" href="{{ url_for('home_page') }}">Home</a>
       </li>
-        <img src=”static/logo.png”  width=”152” height=”102”>
-     
+        
     </ul>
   </div>
 </nav>
