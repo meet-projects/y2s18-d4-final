@@ -3,16 +3,54 @@
     <head>
         <title>Home page</title>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+
+       <!-- Required tags to make the website responsive-->
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+       <!-- Add Bootstrap CSS to the page -->
+       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
     </head>
     <body>
         <h1></h1>
-        <div class="sidebar">
-        		<a href="{{ url_for('register') }}" >SignUp</a>
-        		<a href="{{ url_for('LogIn_page') }}" >LogIn</a>
-        		<a class="active" href="{{ url_for('home_page') }}" >Home</a>
-                <!-- <img src="{{url_for('static', filename='logo.png')}}"  width="152" height="102">-->
-        </div>
+     <!--   <div class="sidebar">
+                <a href="{{ url_for('register') }}" >SignUp</a>
+                <a href="{{ url_for('LogIn_page') }}" >LogIn</a>
+                <a class="active" href="{{ url_for('home_page') }}" >Home</a>
+                 <img src="{{url_for('static', filename='logo.png')}}"  width="152" height="102">-->
 
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li id="login_link" class="nav-item active">
+        <a class="nav-link" href="LogIn_page">Log In <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="register">Sign Up</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="home_page">Home</a>
+      </li>
+        <img src=”static/logo.png”  width=”152” height=”102”>
+     
+    </ul>
+  </div>
+</nav>
+
+
+
+
+            
+
+       <!-- Add JQuery and Bootstrap JS to the page -->
+       <!-- JQuery MUST BE BEFORE BOOTSTRAP -->
+       <script src="{{ url_for('static', filename='jquery.js') }}"></script>
+       <script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>
 
     </body>
 </html>

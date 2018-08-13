@@ -31,13 +31,14 @@ a : active{
 	top: 95%;
 	right: 10px;
 }
-.sidebar{
+.navbar{
 	position: absolute;
 	top: 0px;
-	left: 700px;
 	background-color: white;
 	z-index: 100;
 }
+
+
 /*.title{
 	position: absolute;
 	height: 125px;
