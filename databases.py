@@ -3,7 +3,7 @@ from model import Base, User
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-engine = create_engine('sqlite:///students.db')
+engine = create_engine('sqlite:///databases.db')
 Base.metadata.create_all(engine)
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
@@ -21,6 +21,9 @@ def Register(fname, lname ,uname , password ):
 		password=password)
 	session.add(user_object)
 	session.commit()
+
+
+
 
 def query_by_name(uname):
 	"""

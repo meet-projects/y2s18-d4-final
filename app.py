@@ -7,18 +7,25 @@ def register():
 	if request.method== 'GET':
 		return render_template('register.html')
 	else:	
-		fname = request.form('txb_fname')
-		lanme = request.form('txb_lname')
-		username = request.form('txb_username')
-		password = request.form('txb_pass')
+		fname = request.form['txb_fname']
+		lanme = request.form['txb_lname']
+		username = request.form['txb_username']
+		password = request.form['txb_pass']
 		Register(fname , lanme , username , password)
-		return render_template('home_page' , userName = username)
+		return render_template('home.html' , userName = username)
 	
     
 
-@app.route('/Login')
+@app.route('/Login', methods=['GET' , 'POST'])
 def LogIn_page():
-	return render_template('LogIn.html')
+	if request.method== 'GET':
+		return render_template('LogIn.html')
+	else:	
+		username = request.form['txb_uname']
+		password = request.form['txb_pass']
+		u=query_by_name(username)
+		if u is not None and u.uname==username and u.password==password:
+			return render_template('home.html', userName=username )
 
 @app.route('/Home')
 def home_page():
