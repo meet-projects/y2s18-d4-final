@@ -28,11 +28,14 @@ class Posts(Base):
 	post_id = Column(Integer, primary_key=True)
 	uname = Column(String)
 	post = Column(String)
+	username = Column(Integer)
 
 	def __repr__(self):
 		return ("post_id: {} \n"
 				"User Name: {} \n"
-				"Post: {} \n").format(
+				"Post: {} \n"
+				"username {} \n").format(
 					self.post_id,
 					self.uname,
-					self.post)
+					self.post,
+					self.username)

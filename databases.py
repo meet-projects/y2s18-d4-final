@@ -66,10 +66,11 @@ def query_by_id(user_id):
     return user
 
 
-def add_post(uname , post):
+def add_post(uname , post , username):
 	post_object = Posts(
 		uname=uname,
-		post=post)
+		post=post,
+		username=username)
 	session.add(post_object)
 	session.commit()
 
@@ -80,5 +81,16 @@ def query_all_posts():
 	"""
 	posts = session.query(Posts).all()
 	return posts[::-1]
+
+
+def delete(username):
+	posts=session.query(Posts)
+	for post in posts:
+		if username==post.username:
+			
+			session.query(Posts).filter_by(post_id=post.post_id).delete()
+	
+	session.commit()
+	
 
 #register('noam', 'mertsen' ,'VFDTHDYH' ,  '123456789')

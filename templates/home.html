@@ -82,12 +82,14 @@
 
 </form>
 
+
+
 <!-- <form action="/home"  method="post"> 
 	<input type="text" name="txb_name" placeholder="Your Nickname"><br/>
 	<input style="width: 200px; height: 200px" type="text" name="txb_post" placeholder="Share your story\feelings.."><br/>
 	<input type="submit" name="btn_submit" value="Post"><br/>
 </form>-->
-
+<button > <a href="{{url_for('delete_all')}}">Delete all My posts</a></button>
 {%for i in posts%}
 	<div class="posts">
   		{{i}}

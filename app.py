@@ -56,10 +56,17 @@ def home_page():
 		post = request.form['txb_post']
 		nickName = request.form['txb_name']
 		u=query_by_name(nickName)
-		add_post(nickName , post)
+		add_post(nickName , post , session.get('username'))
 		posts = query_all_posts()
 		return redirect(url_for('home_page'))
-		
+
+@app.route('/delete')
+def delete_all():
+	puname = session.get('username')
+	delete(puname)
+	post=query_all_posts()
+	return render_template('home.html' , posts=post )
+
 
 
 #@app.route('/student/<int:student_id>')
