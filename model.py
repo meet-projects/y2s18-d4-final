@@ -30,9 +30,9 @@ class Posts(Base):
 	post = Column(String)
 
 	def __repr__(self):
-		return ("Post id: {}\n"
+		return ("post_id: {} \n"
 				"User Name: {} \n"
-				"Post: {}").format(
+				"Post: {} \n").format(
 					self.post_id,
 					self.uname,
 					self.post)
