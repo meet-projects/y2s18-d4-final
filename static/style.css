@@ -6,20 +6,39 @@ body, html {
     background-image: url("a.jpg");
 
     /* Full height */
+    width:100%;
     height: 100%;
+    position: fixed;
+    top:0px;
+    left:0px;
 
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
+
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+    z-index: -1;
 }
-.LogInClass{
-	background-color: lightgrey;
-	border:solid lightgrey;
+.posts{
+	background-color: white;
+	border:solid white;
 	border-radius: 7px;
 	position: relative;
-	margin: 100px;
+	margin:200px;
+	width: 350px;
+
+}
+.LogInClass{
+	background-color: #b3ccff;
+	border:solid #b3ccff;
+	border-radius: 7px;
+	position: relative;
+	margin: 100px 200px 200px 440px;
+	width: 350px;
+
 }
 .sidebar{
 	position: fixed;

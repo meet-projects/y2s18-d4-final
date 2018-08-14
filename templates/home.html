@@ -12,7 +12,10 @@
        <!-- Add Bootstrap CSS to the page -->
        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
     </head>
-    <body>
+    <body >
+    	<div class="bg">
+
+    	</div>
         <h1></h1>
      <!--   <div class="sidebar">
                 <a href="{{ url_for('register') }}" >SignUp</a>
@@ -54,16 +57,16 @@
 </nav>
 
 <form action="/home"  method="post">
-	<input type="text" name="txb_name" placeholder="Your Nickname">
-	<input type="text" name="txb_post" placeholder="Share your story\feelings..">
-	<input type="submit" name="btn_submit" value="post">
+	<input type="text" name="txb_name" placeholder="Your Nickname"><br/>
+	<input style="width: 200px; height: 200px" type="text" name="txb_post" placeholder="Share your story\feelings.."><br/>
+	<input type="submit" name="btn_submit" value="Post"><br/>
 </form>
 
 {%for i in posts%}
-
-  {{i}}<br/>
-
-  
+	<div class="posts">
+  		{{i}}
+ 		 <br/>
+	</div>
 {%endfor%}
 
 
