@@ -35,7 +35,9 @@ def LogIn_page():
 		if u is not None and u.uname==username and u.password==password:
 			session['username']=username
 			return redirect(url_for('home_page' ))
-		
+		else:
+
+			return render_template('LogIn.html' , wrong='wrong password or username')
 
 @app.route('/sign_out')
 def sign_out():

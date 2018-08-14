@@ -13,7 +13,7 @@
        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
 	<title>
 	YOU FIRST
-	</title>
+	</title>	
 </head>
 <body>
 	<div class="bg">
@@ -46,6 +46,7 @@
   </div>
 </nav>
 
+
 	<div class="LogInClass">
 			<center>
 				<br/><br/>
@@ -53,7 +54,9 @@
 				<h1><center><font>Log In</font></center></h1><br/>
 						USER NAME:	<input type="text" name="txb_uname" placeholder="User name"><br/><br/>
 						PASSWORD:	<input type="password" name="txb_pass" placeholder="password" ><br/><br/>
+						<div style="color: red;">{{wrong}}</div><br/>
 						<input type="submit" name="btnsubmit" value="Login">
+
 					</form>	
 
 			</center>
