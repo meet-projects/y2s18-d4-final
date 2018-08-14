@@ -79,6 +79,6 @@ def query_all_posts():
 	Print all the posts in the database.
 	"""
 	posts = session.query(Posts).all()
-	return posts
+	return posts[::-1]
 
 #register('noam', 'mertsen' ,'VFDTHDYH' ,  '123456789')

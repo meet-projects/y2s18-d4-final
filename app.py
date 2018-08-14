@@ -14,10 +14,14 @@ def register():
 		lanme = request.form['txb_lname']
 		username = request.form['txb_username']
 		password = request.form['txb_pass']
-		Register(fname , lanme , username , password)
-		session['username']=username
-		return render_template('home.html' , userName = username)
-	
+		cheack_user=query_by_name(username)
+
+		if cheack_user==None:		
+			Register(fname , lanme , username , password)
+			session['username']=username
+			return redirect(url_for('home_page' ))
+		else :
+			return render_template('register.html' , taken='this user name is taken')
     
 
 @app.route('/Login', methods=['GET' , 'POST'])
@@ -30,7 +34,8 @@ def LogIn_page():
 		u=query_by_name(username)
 		if u is not None and u.uname==username and u.password==password:
 			session['username']=username
-			return render_template('home.html', userName=session['username'] )
+			return redirect(url_for('home_page' ))
+		
 
 @app.route('/sign_out')
 def sign_out():
@@ -40,16 +45,19 @@ def sign_out():
 
 @app.route('/home' , methods=['GET' , 'POST'])
 def home_page():
+	if session.get('username')==None:
+		return redirect(url_for('LogIn_page'))
 	if request.method== 'GET':
 		posts = query_all_posts()
-		return render_template('home.html' ,posts=posts  )
+		return render_template('home.html' ,posts=posts , username=session.get('username') )
 	else:	
 		post = request.form['txb_post']
 		nickName = request.form['txb_name']
 		u=query_by_name(nickName)
 		add_post(nickName , post)
 		posts = query_all_posts()
-		return render_template('home.html' ,posts=posts )
+		return redirect(url_for('home_page'))
+		
 
 
 #@app.route('/student/<int:student_id>')
