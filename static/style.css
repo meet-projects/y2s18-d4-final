@@ -1,5 +1,25 @@
-body{
-	background-image: url('Coffee& Me.pdf');
+body, html {
+    height: 100%;
+}
+.bg {
+    /* The image used */
+    background-image: url("a.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.LogInClass{
+	background-color: lightgrey;
+	border:solid lightgrey;
+	border-radius: 7px;
+	position: relative;
+	margin: 100px;
 }
 .sidebar{
 	position: fixed;
