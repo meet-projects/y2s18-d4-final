@@ -22,16 +22,7 @@ body, html {
     filter: blur(3px);
     z-index: -1;
 }
-.posts{
-	background-color: white;
-	border:solid white;
-	border-radius: 7px;
-	position: relative;
-	margin:200px;
-	width: 350px;
-	word-wrap: break-word;
 
-}
 .LogInClass{
 	background-color: #b3ccff;
 	border:solid #b3ccff;
