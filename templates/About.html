@@ -1,0 +1,94 @@
+<DOCTYPE! html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{
+	url_for('static' , filename='style.css')}}">
+	<title>
+	 become BETTER
+	</title>
+	  <!-- Required tags to make the website responsive-->
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+       <!-- Add Bootstrap CSS to the page -->
+       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
+</head>
+<body background="">
+
+	<a name="top"></a>
+
+ 	<div class="bg">
+
+    	</div>
+        <h1></h1>
+     <!--   <div class="sidebar">
+                <a href="{{ url_for('register') }}" >SignUp</a>
+                <a href="{{ url_for('LogIn_page') }}" >LogIn</a>
+                <a class="active" href="{{ url_for('home_page') }}" >Home</a>
+                 <img src="{{url_for('static', filename='logo.png')}}"  width="152" height="102">-->
+
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li id="login_link" class="nav-item active">
+      <li class="nav-item">
+        <p class="nav-link">   Welcome:  {{username}}</p>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('home_page') }}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('Share') }}">Share something</a>
+      </li>
+
+    </ul>
+     
+
+ <ul class="navbar-nav ml-auto">
+
+      <li class="nav-item">
+        <a  class="nav-link" href="{{ url_for('sign_out') }}">Log Out</a>
+      </li>
+    </ul>
+     
+  </div>
+</nav>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+
+<img src="{{url_for(('static') , filename='WhatsApp Image 2018-08-15 at 21.23.13.jpeg')}}">
+<img src="{{url_for(('static') , filename='WhatsApp Image 2018-08-15 at 21.23.13 (1).jpeg')}}">
+<img src="{{url_for(('static') , filename='WhatsApp Image 2018-08-15 at 21.23.13 (2).jpeg')}}">
+<img src="{{url_for(('static') , filename='WhatsApp Image 2018-08-15 at 21.23.13 (3).jpeg')}}">
+<img src="{{url_for(('static') , filename='WhatsApp Image 2018-08-15 at 21.23.13 (4).jpeg')}}">
+<img src="{{url_for(('static') , filename='WhatsApp Image 2018-08-15 at 21.23.13 (5).jpeg')}}">
+<img src="{{url_for(('static') , filename='WhatsApp Image 2018-08-15 at 21.23.13 (7).jpeg')}}">
+
+
+<!-- <form action="/home"  method="post"> 
+	<input type="text" name="txb_name" placeholder="Your Nickname"><br/>
+	<input style="width: 200px; height: 200px" type="text" name="txb_post" placeholder="Share your story\feelings.."><br/>
+	<input type="submit" name="btn_submit" value="Post"><br/>
+</form>-->
+
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<br/><br/>
+
+			
+
+
+		<a href="#top">GO UP</a>
+		<!-- Add JQuery and Bootstrap JS to the page -->
+       <!-- JQuery MUST BE BEFORE BOOTSTRAP -->
+       <script src="{{ url_for('static', filename='jquery.js') }}"></script>
+       <script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>
+</body>
+</html>
