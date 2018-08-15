@@ -65,7 +65,7 @@ def delete_all():
 	puname = session.get('username')
 	delete(puname)
 	post=query_all_posts()
-	return render_template('home.html' , posts=post )
+	return render_template('home.html' , posts=post , username=session.get('username'))
 
 
 
