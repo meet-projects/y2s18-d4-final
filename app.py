@@ -65,6 +65,7 @@ def Share():
 	else:	
 		post = request.form['txb_post']
 		nickName = request.form['txb_name']
+		print("!" * 20)
 		u=query_by_name(nickName)
 		add_post(nickName , post , session.get('username'))
 		posts = query_all_posts()
