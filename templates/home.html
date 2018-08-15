@@ -85,9 +85,8 @@
     	</header>
     	<div class="w3-container">
       	<p>{{i.post}}</p><br/>
-        <button><a href="{{url_for('delete_post', post_id = i.post_id)}}">Delete</a></button>
     	</div>
-    	<button class="w3-button w3-block w3-dark-grey">+ Comment</button>
+    	<button class="w3-button w3-block w3-dark-grey"><a href="{{url_for('delete_post', post_id = i.post_id)}}">Delete</a></button>
   	</div>
   	<br/><br/>
 	</div>

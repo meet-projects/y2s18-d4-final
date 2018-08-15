@@ -3,6 +3,8 @@ body, html {
 }
 .ssss{
 	background-color: #f1f1f1;
+	position: relative;
+	left: 25%;
 }
 .bg {
     /* The image used */
@@ -48,8 +50,8 @@ body, html {
 }
 
 .LogInClass{
-	background-color: #b3ccff;
-	border:solid #b3ccff;
+	background-color: #f1f1f1;
+	border:solid #f1f1f1;
 	border-radius: 7px;
 	position: relative;
 	margin: 100px 200px 200px 440px;
