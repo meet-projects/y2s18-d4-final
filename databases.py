@@ -1,4 +1,4 @@
-from model import Base, Posts , User
+from model import Base, Posts , User , Comments
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
