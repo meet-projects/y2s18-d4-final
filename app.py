@@ -93,8 +93,11 @@ def delete_post(post_id):
 
 @app.route('/Quotes')
 def Quotes():
-	return render_template('quotes.html')
+	return render_template('quotes.html' , username=session.get('username'))
 
+@app.route('/about')
+def About():
+	return render_template('About.html' , username=session.get('username'))
 #@app.route('/student/<int:student_id>')
 #def display_student(student_id):
 #    return render_template('student.html', student=query_by_id(student_id))

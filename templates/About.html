@@ -1,4 +1,4 @@
-<DOCTYPE! html>
+<!doctype html>
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="{{
@@ -17,7 +17,7 @@
 
 	<a name="top"></a>
 
- 	<div class="bg">
+ 	<div>
 
     	</div>
         <h1></h1>
@@ -44,6 +44,12 @@
       <li class="nav-item">
         <a class="nav-link" href="{{ url_for('Share') }}">Share something</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('Quotes') }}">Quotes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('About') }}">About us</a>
+      </li>
 
     </ul>
      
@@ -62,7 +68,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
-
+<div class="imgcontainer">
 <img src="{{url_for(('static') , filename='WhatsApp Image 2018-08-15 at 21.23.13.jpeg')}}">
 <img src="{{url_for(('static') , filename='WhatsApp Image 2018-08-15 at 21.23.13 (1).jpeg')}}">
 <img src="{{url_for(('static') , filename='WhatsApp Image 2018-08-15 at 21.23.13 (2).jpeg')}}">
@@ -70,6 +76,8 @@
 <img src="{{url_for(('static') , filename='WhatsApp Image 2018-08-15 at 21.23.13 (4).jpeg')}}">
 <img src="{{url_for(('static') , filename='WhatsApp Image 2018-08-15 at 21.23.13 (5).jpeg')}}">
 <img src="{{url_for(('static') , filename='WhatsApp Image 2018-08-15 at 21.23.13 (7).jpeg')}}">
+
+</div>
 
 
 <!-- <form action="/home"  method="post"> 

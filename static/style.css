@@ -6,6 +6,9 @@ body, html {
 	position: relative;
 	left: 25%;
 }
+.imgcontainer img{
+	width: 100%;
+}
 .bg {
     /* The image used */
     background-image: url("a.jpg");
@@ -27,11 +30,11 @@ body, html {
     filter: blur(3px);
     z-index: -1;
 }
-.bg2 {
-    /* The image used */
-    background-image: url("h.jpg");
 
-    /* Full height */
+/*.bg2 {
+    /* The image used */
+
+    /* Full height 
     width:100%;
     height: 100%;
     position: fixed;
@@ -39,7 +42,7 @@ body, html {
     left:0px;
 
     /* Center and scale the image nicely */
-    background-position: center;
+ /*   background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -47,11 +50,11 @@ body, html {
     -webkit-filter: blur(3px);
     filter: blur(3px);
     z-index: -1;
-}
+}*/
 
 .LogInClass{
 	background-color: #f1f1f1;
-	border:solid #f1f1f1;
+	border:solid #f1f1f1 1px;
 	border-radius: 7px;
 	position: relative;
 	margin: 100px 200px 200px 440px;

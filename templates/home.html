@@ -17,11 +17,7 @@
 
     	</div>
         <h1></h1>
-     <!--   <div class="sidebar">
-                <a href="{{ url_for('register') }}" >SignUp</a>
-                <a href="{{ url_for('LogIn_page') }}" >LogIn</a>
-                <a class="active" href="{{ url_for('home_page') }}" >Home</a>
-                 <img src="{{url_for('static', filename='logo.png')}}"  width="152" height="102">-->
+    
 
          <nav class="navbar navbar-expand-lg navbar-light bg-light-grey force-fixed">
   <a class="navbar" href="#"></a>
@@ -44,7 +40,7 @@
         <a class="nav-link" href="{{ url_for('Quotes') }}">Quotes</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{ url_for('About_page') }}">About us</a>
+        <a class="nav-link" href="{{ url_for('About') }}">About us</a>
       </li>
     </ul>
      
@@ -69,12 +65,6 @@
 
 
 
-<!-- <form action="/home"  method="post"> 
-	<input type="text" name="txb_name" placeholder="Your Nickname"><br/>
-	<input style="width: 200px; height: 200px" type="text" name="txb_post" placeholder="Share your story\feelings.."><br/>
-	<input type="submit" name="btn_submit" value="Post"><br/>
-</form>-->
-
  <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <br/><br/><br/><br/><br/>
@@ -91,7 +81,8 @@
     	<div class="w3-container">
       	<p>{{i.post}}</p><br/>
     	</div>
-    	<button class="w3-button w3-block w3-dark-grey"><a href="{{url_for('delete_post', post_id = i.post_id)}}">Delete</a></button>
+      
+    	<a href="{{url_for('delete_post', post_id = i.post_id)}}"><button class="w3-button w3-block w3-dark-grey">Delete</button></a>
   	</div>
   	<br/><br/>
 	</div>
