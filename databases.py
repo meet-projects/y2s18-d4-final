@@ -95,6 +95,6 @@ def delete(username):
 def delete_one_post(post_id , username ):
 	post=session.query(Posts).filter_by(post_id=post_id).first()
 	if username==post.username:
-		post.delete()
+		session.query(Posts).filter_by(post_id=post_id).delete()
 	session.commit()
 #register('noam', 'mertsen' ,'VFDTHDYH' ,  '123456789')

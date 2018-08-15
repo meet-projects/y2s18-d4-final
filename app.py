@@ -65,7 +65,6 @@ def Share():
 	else:	
 		post = request.form['txb_post']
 		nickName = request.form['txb_name']
-		print("!" * 20)
 		u=query_by_name(nickName)
 		add_post(nickName , post , session.get('username'))
 		posts = query_all_posts()
@@ -79,13 +78,19 @@ def delete_all():
 	post=query_all_posts()
 	return render_template('home.html' , posts=post , username=session.get('username'))
 
-#@app.route('/delete1post')
-#def delete_one(id):
-#	pass
-#	puname = session.get('username')
-#	delete_one_post(  , puname)
-#	psot=query_all_posts()
-#	return render_template('home.html' posts=post , username=session.get('username'))
+# @app.route('/delete1post')
+# def delete_one(id):
+# 	pass
+# 	puname = session.get('username')
+# 	delete_one_post(  , puname)
+# 	psot=query_all_posts()
+# 	return render_template('home.html' posts=post , username=session.get('username'))
+
+@app.route('/delete_one/<int:post_id>')
+def delete_post(post_id):
+	delete_one_post(post_id, session.get('username'))
+	return redirect(url_for('home_page'))
+
 
 #@app.route('/student/<int:student_id>')
 #def display_student(student_id):
