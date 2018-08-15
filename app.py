@@ -91,9 +91,9 @@ def delete_post(post_id):
 	delete_one_post(post_id, session.get('username'))
 	return redirect(url_for('home_page'))
 
-@app.route('/QOUTS')
-def Qouts():
-	return render_template('qouts.html')
+@app.route('/Quotes')
+def Quotes():
+	return render_template('quotes.html')
 
 #@app.route('/student/<int:student_id>')
 #def display_student(student_id):
