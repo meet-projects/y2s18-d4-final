@@ -44,14 +44,24 @@ def sign_out():
     session.pop('username')
     return render_template('LogIn.html')
 
-
 @app.route('/home' , methods=['GET' , 'POST'])
 def home_page():
 	if session.get('username')==None:
 		return redirect(url_for('LogIn_page'))
-	if request.method== 'GET':
+	if request.method== 'GET':	
 		posts = query_all_posts()
 		return render_template('home.html' ,posts=posts , username=session.get('username') )
+	posts = query_all_posts()	
+	return render_template('home.html' ,posts=posts , username=session.get('username') )
+
+
+@app.route('/share' , methods=['GET' , 'POST'])
+def Share():
+	if session.get('username')==None:
+		return redirect(url_for('LogIn_page'))
+	if request.method== 'GET':
+		posts = query_all_posts()
+		return render_template('Share.html' , username=session.get('username') )
 	else:	
 		post = request.form['txb_post']
 		nickName = request.form['txb_name']
@@ -60,6 +70,7 @@ def home_page():
 		posts = query_all_posts()
 		return redirect(url_for('home_page'))
 
+
 @app.route('/delete')
 def delete_all():
 	puname = session.get('username')
@@ -67,7 +78,13 @@ def delete_all():
 	post=query_all_posts()
 	return render_template('home.html' , posts=post , username=session.get('username'))
 
-
+#@app.route('/delete1post')
+#def delete_one(id):
+#	pass
+#	puname = session.get('username')
+#	delete_one_post(  , puname)
+#	psot=query_all_posts()
+#	return render_template('home.html' posts=post , username=session.get('username'))
 
 #@app.route('/student/<int:student_id>')
 #def display_student(student_id):
